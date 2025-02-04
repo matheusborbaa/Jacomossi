@@ -9,7 +9,7 @@
 
 /* START NAVBAR */
 body {
-    background-color: black;
+    background-color: #F2EFED;
 }
 
 nav {
@@ -169,6 +169,92 @@ nav .menu li a:hover {
     width: 70px;
 }
 /* END SECTION ONE [HOME] */
+
+/* START SECTION TWO [HOME] */
+.section-two {
+    display: flex;
+    padding: 120px;
+    position: relative;
+}
+
+.section-two .item-top {
+    width: 700px;
+    margin: 0 auto;
+}
+
+.section-two .item-top h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.section-two .item-top h2 .line {
+    width: 20px;
+    height: 4px;
+    background-color: #F26722;
+    border-radius: 20px;
+    margin-top: 5px;
+    display: inline-flex;
+}
+
+.section-two .item-top p {
+    font-family: "Roboto", serif;
+    font-weight: 500;
+    color: #808080;
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 30px;
+}
+/* END SECTION TWO [HOME] */
+
+/* START SECTION FOUR [HOME] */
+.section-four {
+    display: flex;
+    padding: 80px 120px;
+    position: relative;
+}
+
+.section-four .our-clients h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.section-four .our-clients h2 .line {
+    width: 20px;
+    height: 4px;
+    background-color: #F26722;
+    border-radius: 20px;
+    margin-top: 5px;
+    display: inline-flex;
+}
+
+.section-four .our-clients ul {
+    display: flex;
+    position: relative;
+}
+
+.section-four .our-clients li {
+    display: flex;
+    list-style-type: none;
+    padding-right: 160px;
+    align-items: center;
+}
+
+.section-four .our-clients li:last-child {
+    padding-right: 0;
+}
+
+.section-four .our-clients li img {
+    width: 140px;
+}
+
+/* END SECTION FOUR [HOME] */
+
 
 /* START FOOTER  */
 footer {
