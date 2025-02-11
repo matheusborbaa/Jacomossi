@@ -183,62 +183,21 @@ jQuery(function() {
 
 });
 
-jQuery('.slhome-excelencia').slick({
-    dots: true,
+jQuery('.sl-clients').slick({
+    dots: false,
     infinite: false,
     speed: 300,
     slidesToShow: 4,
     slidesToScroll: 4,
     responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-
-            }
+        breakpoint: 3000,
+        settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
         }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slhome-abordagem').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
         },
         {
             breakpoint: 1100,
@@ -246,7 +205,7 @@ jQuery('.slhome-abordagem').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: false,
-                dots: true,
+                dots: false,
                 arrows: false
             }
         },
@@ -256,7 +215,7 @@ jQuery('.slhome-abordagem').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: false,
-                dots: true,
+                dots: false,
                 arrows: false
             }
         },
@@ -266,337 +225,8 @@ jQuery('.slhome-abordagem').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 infinite: false,
-                dots: true,
+                dots: false,
                 arrows: false
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slhome-investidor').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: true
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slhome-investidoraut').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: true
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slqs-valores').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slqs-qualidades').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slqs-equipe').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slia-distribuidores').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: true
-
-            }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-    ]
-});
-
-jQuery('.slia-autonomos').slick({
-    dots: true,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 4,
-    slidesToScroll: 4,
-    responsive: [{
-            breakpoint: 9999,
-            settings: 'unslick'
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: true,
-                arrows: true
 
             }
         }
