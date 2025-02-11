@@ -1,16 +1,40 @@
-jQuery(function() {
+jQuery(function () {
+
+    const nav = document.querySelector('nav')
+    const botaoMenu = nav.querySelector('#menu-mb')
+    const opcoesMenu = nav.querySelector('#menu')
+
+    document.addEventListener('click', function (event) {
+        var clickBtn = botaoMenu.contains(event.target)
+        var verificaOpcoes = opcoesMenu.classList.contains('mostrar')
+        var verificaBtn = botaoMenu.classList.contains('ativo')
     
+        if (!clickBtn || verificaOpcoes || verificaBtn) {
+    
+            opcoesMenu.classList.remove('mostrar');
+            botaoMenu.classList.remove('ativo');
+    
+        } else {
+    
+            opcoesMenu.classList.add('mostrar');
+            botaoMenu.classList.add('ativo');
+            
+        }
+    
+    });
+
+
     jQuery(document).scroll(function () {
 
         var scrollPos = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
 
         var index = 0;
 
-        jQuery('.ancora').each(function(){
+        jQuery('.ancora').each(function () {
 
             elemento = jQuery(this);
 
-            if( (elemento.offset().top - 150) <= scrollPos ){
+            if ((elemento.offset().top - 150) <= scrollPos) {
                 jQuery('.menu-scroll-float li').eq(index).addClass('secao-atual');
                 jQuery('.menu-scroll-float li').not(':eq(' + index + ')').removeClass('secao-atual');
             }
@@ -21,35 +45,35 @@ jQuery(function() {
 
     });
 
-    if (jQuery( ".ancora" ).length ) {
+    if (jQuery(".ancora").length) {
 
         html_menu = "";
 
         var index = 0;
 
-        jQuery('.ancora').each(function(){
+        jQuery('.ancora').each(function () {
 
             var elemento_titulo = jQuery(this).data('titulo');
             var elemento_slug = jQuery(this).attr('id');
             var classe_menu = "";
-            
-            if(index == 0){
+
+            if (index == 0) {
                 classe_menu = "secao-atual";
             }
 
             html_menu = html_menu + "<li class='" + classe_menu + "'><a href='#" + elemento_slug + "' data-index='" + index + "'>" + elemento_titulo + "</a></li>";
             index++;
-    
+
         });
-        
+
         jQuery("body").prepend('<div class="row-tags d-none d-md-block menu-scroll-float"><ul>' + html_menu + '</ul></div>').animate({
             "left": "0px"
-          }, "slow");
+        }, "slow");
 
     }
 
-    jQuery(document).on('click', '.menu-scroll-float a', function(e){
-        
+    jQuery(document).on('click', '.menu-scroll-float a', function (e) {
+
         e.preventDefault();
         e.stopPropagation();
 
@@ -62,21 +86,21 @@ jQuery(function() {
 
         jQuery('html, body').animate({
             scrollTop: jQuery('.ancora').eq(index).offset().top - 100
-        }, 1000, function(){
+        }, 1000, function () {
 
 
 
         });
 
-    
-        setTimeout(function(){
+
+        setTimeout(function () {
             location.hash = href;
             elemento.attr('id', href.replace('#', ''));
-          }, 2000);
+        }, 2000);
     });
 
 
-    jQuery(".grafico").each(function(){
+    jQuery(".grafico").each(function () {
 
         var elemento = jQuery(this);
         var elemento_id = jQuery(this).attr('id');
@@ -87,11 +111,11 @@ jQuery(function() {
             url: op.ajaxurl,
             data: {
 
-                'action' : 'Grafico',
-                'fundo' : data_fundo,
+                'action': 'Grafico',
+                'fundo': data_fundo,
 
             },
-            success: function(data){
+            success: function (data) {
 
                 var ctx = document.getElementById(elemento_id).getContext('2d');
                 var chart = new Chart(ctx, data);
@@ -102,76 +126,76 @@ jQuery(function() {
 
     });
 
-    jQuery(document).on('click', '.scroll-conteudo', function(e){
+    jQuery(document).on('click', '.scroll-conteudo', function (e) {
 
         e.preventDefault();
 
         elemento = jQuery(this);
         deslocamento = elemento.offset().top + elemento.height();
 
-        jQuery('html, body').animate({ scrollTop: deslocamento}, 3000);
-    
+        jQuery('html, body').animate({ scrollTop: deslocamento }, 3000);
+
     });
 
 
 
-    if (jQuery(window).width() < 700){
+    if (jQuery(window).width() < 700) {
 
-        jQuery(document).on('click', '.menu-item-has-children > a', function(e){
+        jQuery(document).on('click', '.menu-item-has-children > a', function (e) {
 
             e.preventDefault();
-        
+
         });
-        
+
     }
 
 
 
 
-  jQuery(window).scroll(function() {
-    var scroll = jQuery(window).scrollTop();
+    jQuery(window).scroll(function () {
+        var scroll = jQuery(window).scrollTop();
 
-    jQuery(".animar-esquerda").css({
-        transform: 'matrix(1, 0, 0, 1, -' + scroll + ', -' + scroll + ')',
-      });
+        jQuery(".animar-esquerda").css({
+            transform: 'matrix(1, 0, 0, 1, -' + scroll + ', -' + scroll + ')',
+        });
 
-      jQuery(".animar-direita").css({
-        transform: 'matrix(1, 0, 0, 1, ' + scroll + ', -' + scroll + ')'
-      });
-
-      
-      jQuery(".animar-saida-direita").each(function(){
-
-        elemento = jQuery(this);
-
-        calculo = (scroll + elemento.height()) - elemento.offset().top;
-
-        //Só animar se estiver na tela
-        if(calculo > 0){
-
-            elemento.css({
-                transform: 'matrix(1, 0, 0, 1, ' + calculo + ', 0)'
-              });
-    
-        }
-          
-    
-      });
+        jQuery(".animar-direita").css({
+            transform: 'matrix(1, 0, 0, 1, ' + scroll + ', -' + scroll + ')'
+        });
 
 
-      
+        jQuery(".animar-saida-direita").each(function () {
 
-      jQuery(".animar-topo").css({
-        transform: 'matrix(1, 0, 0, 1, 0, -' + scroll + ')'
-      });
+            elemento = jQuery(this);
+
+            calculo = (scroll + elemento.height()) - elemento.offset().top;
+
+            //Só animar se estiver na tela
+            if (calculo > 0) {
+
+                elemento.css({
+                    transform: 'matrix(1, 0, 0, 1, ' + calculo + ', 0)'
+                });
+
+            }
+
+
+        });
+
+
+
+
+        jQuery(".animar-topo").css({
+            transform: 'matrix(1, 0, 0, 1, 0, -' + scroll + ')'
+        });
 
 
         jQuery(".animar-fade").css("opacity", 1 - jQuery(window).scrollTop() / 250);
 
-  });
+    });
 
 
-    jQuery(document).on('click', '.btn-menu', function(e) {
+    jQuery(document).on('click', '.btn-menu', function (e) {
 
         e.preventDefault();
 
@@ -198,38 +222,38 @@ jQuery('.sl-clients').slick({
             dots: false,
             arrows: false
         }
-        },
-        {
-            breakpoint: 1100,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: false,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 670,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: false,
-                arrows: false
-            }
-        },
-        {
-            breakpoint: 480,
-            settings: {
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: false,
-                dots: false,
-                arrows: false
-
-            }
+    },
+    {
+        breakpoint: 1100,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
         }
+    },
+    {
+        breakpoint: 670,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
+        }
+    },
+    {
+        breakpoint: 480,
+        settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            infinite: false,
+            dots: false,
+            arrows: false
+
+        }
+    }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
