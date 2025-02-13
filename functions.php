@@ -14,8 +14,11 @@ define('_PATHTHEME', get_stylesheet_directory());
 //Tema CSS
 require_once(_PATHTHEME."/framework/tema.css.php");
 
+//ACF
+require_once(_PATHTHEME."/framework/acf/acf.inicio.php");
+
 //Posts
-require_once(_PATHTHEME."/framework/posts/exemplo.php");
+// require_once(_PATHTHEME."/framework/posts/exemplo.php");
 
 //Assets
 require_once(_PATHTHEME."/framework/assets.php");

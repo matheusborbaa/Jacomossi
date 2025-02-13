@@ -1,3 +1,11 @@
+<?php 
+//SOCIALS
+$instagram = get_field('instagram');
+$facebook = get_field('facebook');
+$whatsapp = get_field('whatsapp');
+
+?>
+
 <footer>
     <div class="footer-itens">
         <div class="logo">
@@ -12,9 +20,39 @@
         </div>
         <div class="right">
             <ul class="socials">
-                <li><a href=""><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-                <li><a href=""><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                <li><a href=""><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+                <?php
+
+                if (!empty($instagram)) {
+
+                ?>
+
+                    <li><a href="<?php echo $instagram; ?>"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+
+                <?php
+
+                }
+
+                if (!empty($facebook)) {
+
+                ?>
+
+                    <li><a href="<?php echo $facebook; ?>"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+
+                <?php
+
+                }
+
+                if (!empty($whatsapp)) {
+
+                ?>
+
+                    <li><a href="<?php echo $whatsapp; ?>"><i class="fa fa-whatsapp" aria-hidden="true"></i></a></li>
+
+                <?php
+
+                }
+
+                ?>
             </ul>
         </div>
     </div>

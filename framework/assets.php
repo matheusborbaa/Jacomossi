@@ -8,11 +8,6 @@ function css_js_assets(){
     wp_enqueue_style('animate-css');
     
     wp_enqueue_style(
-        'google-font',
-        '//fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'
-    );
-
-    wp_enqueue_style(
         'adobe-font',
         '//use.typekit.net/nof6dda.css'
     );

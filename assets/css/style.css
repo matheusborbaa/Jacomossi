@@ -168,7 +168,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-one .content-text h1 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #fff;
     text-transform: uppercase;
@@ -176,7 +176,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-one .content-text p {
-    font-family: "Roboto", serif;
+    font-family: 'Roboto';
     font-weight: 500;
     color: #fff;
     font-size: 14px;
@@ -185,7 +185,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-one .content-text .btn {
-    font-family: "Montserrat", serif;
+    font-family: 'Montserrat';
     text-transform: uppercase;
     color: #fff;
     font-size: 12px;
@@ -225,7 +225,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-two .item-top h2 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #000;
     font-size: 38px;
@@ -242,7 +242,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-two .item-top p {
-    font-family: "Roboto", serif;
+    font-family: 'Roboto';
     font-weight: 500;
     color: #808080;
     font-size: 14px;
@@ -268,7 +268,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-three h2 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #fff;
     font-size: 38px;
@@ -287,7 +287,7 @@ nav button.menu-mb span.quatro {
 
 .section-three p {
     text-align: center;
-    font-family: "Roboto", serif;
+    font-family: 'Roboto';
     font-weight: 400;
     color: #fff;
     font-size: 14px;
@@ -322,7 +322,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-three .item-content .itens h3 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #000;
     font-size: 22px;
@@ -330,7 +330,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-three .item-content .itens p {
-    font-family: "Roboto", serif;
+    font-family: 'Roboto';
     color: #232323;
     font-weight: 300;
     margin-top: 5px;
@@ -351,7 +351,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-four .item-right h2 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #213545;
     font-size: 50px;
@@ -402,7 +402,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-five h2 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #000;
     font-size: 44px;
@@ -419,7 +419,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-five h3 {
-    font-family: "Roboto", serif;
+    font-family: 'Roboto';
     color: #7F7F7F;
     font-weight: 500;
 }
@@ -430,7 +430,7 @@ nav button.menu-mb span.quatro {
 
 .section-five .upload {
     display: flex;
-    font-family: "Roboto", serif;
+    font-family: 'Roboto';
     color: #000;
     font-weight: 400;
     margin-top: 40px;
@@ -473,7 +473,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-seven .our-clients h2 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #000;
     font-size: 38px;
@@ -514,7 +514,7 @@ nav button.menu-mb span.quatro {
 }
 
 .section-seven .services-provided h2 {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-weight: 400;
     color: #000;
     font-size: 38px;
@@ -607,7 +607,7 @@ footer .copyright li {
 }
 
 footer .copyright li a {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     font-size: 16px;
     color: #fff;
     font-weight: 500;
@@ -664,7 +664,7 @@ footer .copyright {
 }
 
 footer .copyright p {
-    font-family: "eurostile", sans-serif;
+    font-family: 'eurostile';
     color: #fff;
     font-size: 16px;
     letter-spacing: 5px;
@@ -674,6 +674,12 @@ footer .copyright p {
 /* END FOOTER  */
 
 /* START RESPONSIVE  */
+@media screen and (max-width: 1459px) {
+    .section-three .item-content .itens:nth-last-child(2) {
+        margin-right: 0;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     nav {
         padding: 0 30px;
