@@ -39,10 +39,10 @@ add_action('admin_head', 'custom_admin_styles');
 
 function change_my_wp_login_image() {
 
-$cor_fundo = "#f4f4f4";
+$cor_fundo = "#000";
 
-$cor_principal = "#BBEF6A";
-$cor_principal_texto = "#5A5A59";
+$cor_principal = "#F26722";
+$cor_principal_texto = "#fff";
 
 
 	echo "
@@ -55,6 +55,10 @@ background-color:".$cor_fundo." !important;
 		
 		input[type=checkbox]:checked:before, a, p#nav{
 		color:".$cor_principal_texto." !important;
+}
+
+.login label {
+	color: ".$cor_principal_texto.";
 }
 
 p#nav{
